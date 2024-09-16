@@ -145,7 +145,7 @@ export function initializeWebSocket() {
       const newData = JSON.parse(event.data);
       console.log('Received data:', newData);
       
-      // Check if emergencytype contains 'f'
+      // Check if emergencytype contains 'f' d
       if (newData.emergencytype && newData.emergencytype.includes('f')) {
         toggleNotification(true, true);
         return;
