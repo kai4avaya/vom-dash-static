@@ -1,0 +1,287 @@
+{
+  "bar": {
+    "1": [
+      { "category": "General", "value": 18 },
+      { "category": "Help Desk", "value": 2 },
+      { "category": "Power Outage", "value": 0 },
+      { "category": "City Response", "value": 0 }
+    ],
+    "2": [
+      { "category": "General", "value": 17 },
+      { "category": "Help Desk", "value": 1 },
+      { "category": "Power Outage", "value": 0 },
+      { "category": "City Response", "value": 0 }
+    ],
+    "3": [
+      { "category": "General", "value": 16 },
+      { "category": "Help Desk", "value": 4 },
+      { "category": "Power Outage", "value": 0 },
+      { "category": "City Response", "value": 0 }
+    ],
+    "4": [
+      { "category": "General", "value": 14 },
+      { "category": "Help Desk", "value": 6 },
+      { "category": "Power Outage", "value": 0 },
+      { "category": "City Response", "value": 0 }
+    ],
+    "5": [
+      { "category": "General", "value": 12 },
+      { "category": "Help Desk", "value": 4 },
+      { "category": "Power Outage", "value": 2 },
+      { "category": "City Response", "value": 2 }
+    ]
+  },
+  "animatedDots": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "animatedLine": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "antimatedText": {
+    "1": [
+      "Center 101: All systems are functioning normally.",
+      "Agent John Doe completed a routine call without issues.",
+      "No issues detected at Center 203. All calls are being routed as expected.",
+      "Backup systems checked at Center 402. Everything is operational.",
+      "Agent Alice Smith is handling a support call smoothly at Center 321."
+    ],
+    "2": [
+      "Center 102: Increased handle times detected for multiple agents.",
+      "Agent Maria Johnson experienced an unusually long call at Center 215.",
+      "Supervisors at Center 322 have been notified to coach agents on reducing handle times.",
+      "Center 110: Agent Mark Davis handled a 45-minute call, significantly above average.",
+      "Supervisors at Center 420 are reviewing recent call interactions for optimization."
+    ],
+    "3": [
+      "Center 145: Voice interactions have surged over the past 30 minutes.",
+      "Agents at Center 308 are being shifted from digital channels to handle voice calls.",
+      "Center 215: Increased volume of voice calls is impacting service times.",
+      "VOM recommended moving 3 agents to voice channels at Center 405.",
+      "Center 510: Agents reassigned to voice queues to address interaction volume."
+    ],
+    "4": [
+      "Center 321: Service disruption has been detected, all agents notified.",
+      "Emergency workflow activated at Center 404 due to significant delays in service.",
+      "Extended hold times communicated to customers at Center 222.",
+      "Center 150: Supervisors are adjusting workflows to accommodate the service disruption.",
+      "VOM detected a severe disruption at Center 501. Agents are prepared for increased hold times."
+    ],
+    "5": [
+      "Center 102: Power outage detected in multiple states, backup systems engaged.",
+      "Agent Sam Wilson at Center 400 is prepared for the emergency influx of calls.",
+      "Additional agents are being staffed at Center 155 to manage the increased volume.",
+      "Center 215: Emergency protocol initiated due to power outage, agents on standby.",
+      "20 additional agents added to the Gitex queue at Center 500."
+    ]
+  },
+  "counters": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "earthquakeGlobe": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": false
+  },
+  "hexabinUS": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "lineChart": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "lineGraphStatic": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "pieChart": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "radar": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "sensorGraph": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "animatedArea": { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "travelGlobe":  { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+  "multiArea":  { "1": 1, "2": 2, "3": 3, "4": 4, "5": 5 },
+
+  "scrollToElements": {
+    "1": [
+      {
+        "elementId": "ru-counter-container",
+        "message": "These counters show the current daily engagements across different regions and the number of waiting customers. All metrics are within normal ranges."
+      },
+      {
+        "elementId": "animated-line-graph-panel",
+        "message": "This animated line graph displays real-time data on customer interactions, showing stable patterns across all channels."
+      },
+      {
+        "elementId": "animated-area-graph-panel",
+        "message": "The animated area graph illustrates the distribution of workload across different departments, indicating balanced operations."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "All systems are working well. This bar chart shows normal operational metrics across different departments."
+      },
+      {
+        "elementId": "line-graph-panel",
+        "message": "The line graph demonstrates stable handle times across all agents over the past 24 hours."
+      },
+      {
+        "elementId": "piechart-panel",
+        "message": "The pie chart shows a balanced distribution of call types, indicating normal operations and customer inquiry patterns."
+      },
+      {
+        "elementId": "dot-panel",
+        "message": "Each dot represents an agent, with colors indicating different departments. The uniform size shows consistent performance."
+      },
+      {
+        "elementId": "sensor-graph-panel",
+        "message": "This sensor graph shows stable network performance and system resource utilization across all servers."
+      }
+    ],
+    "2": [
+      {
+        "elementId": "cn-counter-container",
+        "message": "Notice the slight increase in waiting customers and higher engagement numbers for NA and EU regions, indicating a potential issue."
+      },
+      {
+        "elementId": "animated-line-graph-panel",
+        "message": "The animated line graph is showing an upward trend in customer interaction times across all channels."
+      },
+      {
+        "elementId": "animated-area-graph-panel",
+        "message": "This animated area graph reveals an growing imbalance in workload distribution, with some departments experiencing higher volumes."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "The bar chart shows an increase in average handle times across all active agents, with some departments more affected than others."
+      },
+      {
+        "elementId": "line-graph-panel",
+        "message": "This line graph demonstrates the trend of increasing handle times over the past 4 hours, with a notable spike in the last 30 minutes."
+      },
+      {
+        "elementId": "dot-panel",
+        "message": "Each dot represents an agent, with larger dots indicating longer handle times. Notice the cluster of larger dots in certain departments."
+      },
+      {
+        "elementId": "piechart-panel",
+        "message": "This pie chart breaks down the types of calls contributing to longer handle times, helping focus coaching efforts."
+      }
+    ],
+    "3": [
+      {
+        "elementId": "other-counter-container",
+        "message": "Observe the significant increase in waiting customers and higher engagement numbers across all regions, particularly in NA."
+      },
+      {
+        "elementId": "animated-line-graph-panel",
+        "message": "The animated line graph shows a sharp increase in voice interactions compared to other channels."
+      },
+      {
+        "elementId": "animated-area-graph-panel",
+        "message": "This animated area graph illustrates the growing disparity between voice and digital channel workloads."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "The bar chart indicates a spike in voice interaction volume over the past 30 minutes compared to the same time yesterday."
+      },
+      {
+        "elementId": "line-graph-panel",
+        "message": "This line graph shows the increasing trend of voice interactions compared to digital channels over the last 2 hours."
+      },
+      {
+        "elementId": "pie-panel",
+        "message": "The pie chart illustrates the current distribution of agents across voice and digital channels, highlighting the imbalance."
+      },
+      {
+        "elementId": "force-graph-panel",
+        "message": "This force graph illustrates the current agent allocation and suggests optimal reallocation to handle the increased voice volume."
+      },
+      {
+        "elementId": "hexabin-panel",
+        "message": "The hexbin chart displays the concentration of voice calls by topic, helping identify the main drivers of increased volume."
+      }
+    ],
+    "4": [
+      {
+        "elementId": "us-counter-container",
+        "message": "The counters show a dramatic increase in waiting customers and engagement numbers across all regions, indicating a widespread service disruption."
+      },
+      {
+        "elementId": "animated-line-graph-panel",
+        "message": "This animated line graph visualizes the sudden spike in customer interaction times and hold durations across all channels."
+      },
+      {
+        "elementId": "animated-area-graph-panel",
+        "message": "The animated area graph shows a severe imbalance in workload distribution, with all departments experiencing high volumes."
+      },
+      {
+        "elementId": "earthquake-globe-panel",
+        "message": "The globe visualization shows the widespread impact of the service disruption across all customers, with affected areas highlighted."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "All systems are working well. This bar chart shows normal operational metrics across different departments."
+      },
+      {
+        "elementId": "hexabin-panel",
+        "message": "This hexbin chart represents the density of affected customers in different regions, with darker colors indicating higher impact."
+      },
+      {
+        "elementId": "line-graph-panel",
+        "message": "The line graph shows the sudden increase in hold times due to the service disruption, with projections for the next hour."
+      },
+      {
+        "elementId": "force-graph-panel",
+        "message": "This force graph illustrates the interconnected systems affected by the service disruption, helping identify the root cause."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "The bar chart compares the current call volume to our capacity across different queues, highlighting overwhelmed areas."
+      },
+      {
+        "elementId": "piechart-panel",
+        "message": "This pie chart breaks down the types of services affected, helping prioritize recovery efforts."
+      },
+      {
+        "elementId": "sensor-graph-panel",
+        "message": "The sensor graph shows real-time system performance metrics, indicating which components are under stress."
+      }
+    ],
+    "5": [
+      {
+        "elementId": "other-counter-container",
+        "message": "The counters reveal an overwhelming number of waiting customers and extremely high engagement numbers in NA, reflecting the impact of the power outage."
+      },
+      {
+        "elementId": "animated-line-graph-panel",
+        "message": "This animated line graph shows the rapid escalation of customer interactions and emergency calls related to the power outage."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "All systems are working well. This bar chart shows normal operational metrics across different departments."
+      },
+      {
+        "elementId": "animated-area-graph-panel",
+        "message": "The animated area graph illustrates the shift in workload towards emergency response teams and power restoration efforts."
+      },
+      {
+        "elementId": "earthquake-globe-panel",
+        "message": "The globe visualization highlights the states affected by the power outage due to weather conditions, with severity indicated by color."
+      },
+      {
+        "elementId": "hexabin-panel",
+        "message": "This hexbin chart shows the concentration of power outage reports across multiple states, with each hexagon representing a cluster of reports."
+      },
+      {
+        "elementId": "bar-chart-panel",
+        "message": "The bar chart displays the increased inbound call volume across different queues due to the power outage, compared to normal operations."
+      },
+      {
+        "elementId": "world-map-panel",
+        "message": "This world map focuses on the affected regions, showing the extent of the power outage emergency and the spread of the weather system."
+      },
+      {
+        "elementId": "line-graph-panel",
+        "message": "The line graph tracks the number of affected customers over time, showing the progression of the power outage."
+      },
+      {
+        "elementId": "piechart-panel",
+        "message": "This pie chart breaks down the types of emergency calls received, helping allocate resources appropriately."
+      },
+      {
+        "elementId": "sensor-graph-panel",
+        "message": "The sensor graph monitors the status of emergency generators and backup systems across affected areas."
+      },
+      {
+        "elementId": "force-graph-panel",
+        "message": "This force graph shows the relationships between affected power grids and critical infrastructure, aiding in prioritization of repairs."
+      }
+    ]
+  }
+}

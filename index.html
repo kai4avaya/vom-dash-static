@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaya VOM Dashboard</title>
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/neo/dist/css/neov2/neo/neo.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="css/neo/neo.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f0f0f0;
+      /* Light grey background */
+    }
+
+    .playground-topnav {
+      z-index: 1000;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .neo-leftnav--wrapper {
+      width: 250px;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      max-width: 1600px;
+      /* Increased max-width */
+
+      margin: 0 auto;
+      width: 95%;
+      /* Add this to create space on the sides */
+    }
+
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .panel {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel:hover {
+      background-color: #f5f5f5;
+    }
+
+    .panel.clicked {
+      background-color: #ffeeee;
+    }
+
+    .bottom-panel {
+      grid-column: 1 / -1;
+    }
+
+    .bottom-panel.clicked {
+      background-color: #e6ffe6;
+      /* Light green shade */
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .counter-panel {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 4rem;
+    }
+
+    .counter-panel h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.2;
+    }
+
+    .country-code {
+      font-size: 0.75em;
+      color: #666;
+    }
+
+    .counter {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #cc0000;
+    }
+
+    @media (min-width: 40em) {
+      .counter-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .counter-panel h3 {
+        font-size: 1rem;
+      }
+
+      .counter {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (min-width: 64em) {
+      .counter-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .counter-panel h3 {
+        font-size: 1.1rem;
+      }
+
+      .counter {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        /* Stack panels vertically on smaller screens */
+      }
+    }
+
+    .make-big {
+      transition: transform 1s ease;
+      /* Animation duration, timing function */
+      transform: scale(1.1);
+      /* Initial scale */
+      z-index: 1000;
+      border: 2px solid red;
+    }
+
+    #custom-switch-container {
+      display: inline-block;
+      margin-top: 0.7em;
+      margin-right: 0.80em;
+    }
+
+    .custom-neo-switch {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .custom-neo-switch input {
+      display: none;
+    }
+
+    .custom-neo-switch__icon {
+      width: 32px;
+      height: 16px;
+      background-color: #ccc;
+      border-radius: 8px;
+      margin-right: 8px;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .custom-neo-switch__icon::after {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: white;
+      border-radius: 50%;
+      top: 1px;
+      left: 1px;
+      transition: transform 0.3s;
+    }
+
+    .custom-neo-switch input:checked+.custom-neo-switch__icon {
+      background-color: #0066cc;
+    }
+
+    .custom-neo-switch input:checked+.custom-neo-switch__icon::after {
+      transform: translateX(16px);
+    }
+
+    #message-panel {
+      height: 100px;
+      max-height: 100px;
+      overflow: hidden;
+      grid-column: 1 / -1;
+      margin-top: 20px;
+      /* Add some space above the message panel */
+    }
+
+    .main-data {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+  </style>
+</head>
+
+<body>
+  <!-- TOP NAVBAR -->
+  <div class="playground-topnav" style="margin-bottom: 10px">
+    <nav class="neo-navbar">
+      <div class="neo-nav--left">
+        <svg style="
+    padding-top: 10px;
+    scale: 0.8;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0"
+          width="350" height="100" id="Avaya Logo">
+          <defs>
+            <path fill="#CC0000" d="M 0,72
+          L 34,0
+          H 44
+          L 78,72
+          H 64
+          L 39,18 24,51
+          H 47
+          L 52,61
+          H 19
+          L 14,72
+          Z" id="LetterA" />
+            <path fill="#CC0000" d="M 0,0
+          L 34,72
+          H 44
+          L 78,0
+          H 64
+          L 39,55
+          L 14,0
+          Z" id="LetterV" />
+            <path fill="#CC0000" d="M 0,0
+          L 30,71
+          L 17,98
+          H 31
+          L 78,0
+          H 63
+          L 37,56
+          L 15,0
+          Z" id="LetterY" />
+          </defs>
+          <use x="4.0" y="1.0" xlink:href="#LetterA" />
+          <use x="69.0" y="1.0" xlink:href="#LetterV" />
+          <use x="133.0" y="1.0" xlink:href="#LetterA" />
+          <use x="200.0" y="1.0" xlink:href="#LetterY" />
+          <use x="264.0" y="1.0" xlink:href="#LetterA" />
+        </svg>
+
+      </div>
+
+
+      <div class="neo-nav--right">
+
+
+        <div class="neo-nav">
+          <!-- <div id="custom-switch-container" class="custom-neo-form-control">
+            <label class="custom-neo-switch" for="scroll-switch">
+              <input id="scroll-switch" type="checkbox" role="switch" checked>
+              <i class="custom-neo-switch__icon"></i>
+              Auto Scroll
+            </label>
+          </div> -->
+          <div class="neo-badge__navbutton">
+            <button class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on" aria-label="notifications">
+            </button>
+          </div>
+          <div class="neo-badge__navbutton">
+            <button class="neo-badge__navbutton--content neo-btn neo-icon-settings" aria-label="Settings">
+            </button>
+          </div>
+          <div class="neo-nav-status neo-nav-status--connected">
+            <div class="neo-nav-status-info">
+              <p>
+                Virtual Operations Manager
+              </p>
+              <span id="connected-timer" class="neo-label neo-label--connected">
+                Connected 00:00:00
+              </span>
+            </div>
+            <figure class="neo-avatar neo-avatar--generic">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="main-data">
+
+
+    <div
+  class="neo-notification neo-notification--info" style="display: none;"
+  role="alert"
+  aria-live="polite"
+>
+  <div
+    role="img"
+    class="neo-notification__icon"
+    aria-label="icon"
+  >
+  </div>
+  <div class="neo-notification__message">
+    <div class="neo-notification__message__wrapper">
+      <p class="neo-notification__timestamp neo-body-small neo-semibold">
+        09/16/2024, 11:08 AM
+      </p>
+    </div>
+    <div class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated">
+      Info
+    </div>
+    <div class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated">
+      Predicted Emergency Notice
+    </div>
+    <div class="neo-notification__actions--multiline">
+      <div class="neo-notification__options">
+        <button
+          class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+          data-badge
+        >
+          Edit
+        </button>
+        <button
+          class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+          data-badge
+        >
+          Alert
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="neo-notification__actions">
+  </div>
+</div>
+
+    <!-- Counter Panels -->
+    <div class="counter-grid">
+      <div class="counter-panel" is="us-counter-container">
+        <h3>Daily Engagements <span class="country-code">NA</span></h3>
+        <div class="counter" id="us-counter">0</div>
+      </div>
+      <div class="counter-panel" id="ru-counter-container">
+        <h3>Daily Engagements <span class="country-code">APAC</span> </h3>
+        <div class="counter" id="ru-counter">0</div>
+      </div>
+      <div class="counter-panel" id="cn-counter-container">
+        <h3>Daily Engagements <span class="country-code">Gitex</span></h3>
+        <div class="counter" id="cn-counter">0</div>
+      </div>
+      <div class="counter-panel" id="other-counter-container">
+        <h3>Waiting</h3>
+        <div class="counter" id="other-counter">0</div>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="panel" id="bar-chart-panel"></div>
+      <div class="panel" id="pie-panel"></div>
+      <div class="panel" id="line-graph-static-panel"></div>
+      <div class="panel" id="multi-area-panel"></div>
+      <!-- <div class="panel" id="earthquake-globe-panel"></div>
+        <div class="panel" id="world-map-panel"></div>
+        <div class="panel" id="hexabin-panel"></div>
+        <div class="panel" id="piechart-panel"></div>
+        <div class="panel" id="dot-panel"></div>
+        <div class="panel" id="pie-panel"></div>
+        <div class="panel" id="force-graph-panel"></div>
+        <div class="panel" id="sensor-graph-panel"></div> -->
+
+
+
+
+    </div>
+    <div class="panel bottom-panel" id="message-panel">All Systems Normal</div>
+  </div>
+  </div>
+  </div>
+</body>
+<script>
+  // SET TIMER
+  window.addEventListener('load', function () {
+    let startTime = Date.now();
+
+    function formatTime(ms) {
+      let totalSeconds = Math.floor(ms / 1000);
+      let hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      let minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      let seconds = String(totalSeconds % 60).padStart(2, '0');
+      return `${hours}:${minutes}:${seconds}`;
+    }
+
+    function updateTimer() {
+      let currentTime = Date.now();
+      let elapsedTime = currentTime - startTime;
+      document.getElementById('connected-timer').textContent = `Connected ${formatTime(elapsedTime)}`;
+    }
+
+    setInterval(updateTimer, 1000); // Update the timer every second
+
+    function formatDateTime(date) {
+      const options = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+      };
+      return date.toLocaleString('en-US', options);
+    }
+
+
+  })
+
+</script>
+
+<script>
+
+
+
+
+
+
+  function showSpinner() {
+    document.getElementById('spinner').style.display = 'block';
+  }
+
+  function hideSpinner() {
+    document.getElementById('spinner').style.display = 'none';
+  }
+
+</script>
+
+<script type="module" src="main.js"></script>
+
+</html>
