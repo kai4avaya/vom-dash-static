@@ -2,11 +2,11 @@
 import * as d3 from "d3";
 
 const callCenterMetrics = [
-  { category: "Resolved", color: "#2ecc71" },
-  { category: "In Progress", color: "#f1c40f" },
-  { category: "Waiting", color: "#e67e22" },
-  { category: "Escalated", color: "#e74c3c" },
-  { category: "Abandoned", color: "#95a5a6" }
+  { category: "Resolved", color: "#4ECDC4" },
+  { category: "In Progress", color: "#45B7D1" },
+  { category: "Waiting", color: "#FFA07A" },
+  { category: "Escalated", color: "#FF6B6B" },
+  { category: "Abandoned", color: "#FFD700" }  // Added a gold color for the fifth category
 ];
 
 function generateScenarioData(chaosLevel) {
@@ -114,7 +114,7 @@ export function createAnimatedPieChart(container, initialChaosLevel = 1, {width 
       .style("fill", "white")
       .text(d => d.data.value);
 
-    // Move legend to lower right
+    // Legend (lower right)
     const legendWidth = 120;
     const legendHeight = callCenterMetrics.length * 25;
     const legend = svg.append("g")
@@ -139,6 +139,26 @@ export function createAnimatedPieChart(container, initialChaosLevel = 1, {width 
     });
 
     return svg.node();
+  }
+
+  function updateChart() {
+    const duration = 1000;
+    const interpolate = d3.interpolate(0, 1);
+
+    const animate = (time) => {
+      const t = Math.min(1, interpolate(time / duration));
+      container.innerHTML = '';
+      container.appendChild(createPieChart(t));
+      if (t < 1) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  }
+
+  function updateChaosLevel(newLevel) {
+    chaosLevel = newLevel;
+    data = generateScenarioData(chaosLevel);
+    updateChart();
   }
 
   function updateChart() {

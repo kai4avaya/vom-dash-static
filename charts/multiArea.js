@@ -17,10 +17,10 @@ export function createAgentWellnessChart(element, chaosLevel) {
 
   // Define a color mapping function
   const colorMap = {
-    "General": "#d53e4f",
-    "Help Desk": "#fc8d59",
-    "Power Outage": "#fee08b",
-    "City Response": "#99d594"
+    "General": "#4ECDC4",
+    "Help Desk": "#45B7D1",
+    "Power Outage": "#FFA07A",
+    "City Response": "#FF6B6B"
   };
 
   // Create the plot
