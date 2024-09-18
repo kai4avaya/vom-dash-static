@@ -56,7 +56,7 @@ function generateScenarioData(chaosLevel) {
   }
 }
 
-export function createAnimatedPieChart(container, initialChaosLevel = 1, {width = 500, height = 500} = {}) {
+export function createAnimatedPieChart(container, initialChaosLevel = 1, {width = 700, height = 500} = {}) {
   let chaosLevel = initialChaosLevel;
   let data = generateScenarioData(chaosLevel);
 
@@ -83,17 +83,17 @@ export function createAnimatedPieChart(container, initialChaosLevel = 1, {width 
 
     const g = svg.append("g");
 
-    // Move title to the right
+    // Title
     svg.append("text")
-      .attr("x", 20)  // Adjust this value to move left/right
-      .attr("y", -height / 2 + 40)  // Adjust this value to move up/down
-      .attr("text-anchor", "end")
+      .attr("x", -width / 2 + 20)
+      .attr("y", -height / 2 + 40)
+      .attr("text-anchor", "start")
       .style("font-size", "32px")
-      .style("line-height", "48px")
-      .style("font-family", "Arial, sans-serif")
+      .style("font-family", "noto-sans, sans-serif")
       .style("fill", "#333")
       .text("Call Center Metrics");
 
+    // Pie chart arcs
     const arcs = g.selectAll("arc")
       .data(pie(data))
       .enter()
@@ -114,27 +114,29 @@ export function createAnimatedPieChart(container, initialChaosLevel = 1, {width 
       .style("fill", "white")
       .text(d => d.data.value);
 
-    // Move legend to bottom right
+    // Move legend to lower right
+    const legendWidth = 120;
+    const legendHeight = callCenterMetrics.length * 25;
     const legend = svg.append("g")
-      .attr("transform", `translate(${width/2 - 100}, ${height/2 - 120})`);  // Adjust these values to fine-tune position
+      .attr("transform", `translate(${width/2 - legendWidth - 10}, ${height/2 - legendHeight - 10})`);
 
     callCenterMetrics.forEach((metric, i) => {
       const legendRow = legend.append("g")
-        .attr("transform", `translate(0, ${i * 20})`);
+        .attr("transform", `translate(0, ${i * 25})`);
       
       legendRow.append("rect")
-        .attr("width", 10)
-        .attr("height", 10)
+        .attr("width", 12)
+        .attr("height", 12)
         .attr("fill", metric.color);
 
       legendRow.append("text")
-        .attr("x", 15)
+        .attr("x", 18)
         .attr("y", 10)
         .attr("text-anchor", "start")
         .style("font-size", "12px")
+        .style("fill", "#333")
         .text(metric.category);
     });
-
 
     return svg.node();
   }

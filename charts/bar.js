@@ -2,10 +2,10 @@ import * as Plot from "@observablehq/plot";
 
 
 const sampleData = [
-  { "category": "Americas", "value": 21 },
-  { "category": "APAC", "value": 19 },
-  { "category": "EMEA", "value": 16 },
-  { "category": "Gitex", "value": 6 }
+  { "category": "General", "value": 18 },
+      { "category": "Help Desk", "value": 2 },
+      { "category": "Power Outage", "value": 0 },
+      { "category": "City Response", "value": 0 }
 ]
 export function createBarChart(data = sampleData, { width = 700, height = 400 } = {}) {
   const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A"];
