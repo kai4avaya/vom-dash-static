@@ -2,11 +2,11 @@
 import * as d3 from "d3";
 
 const callCenterMetrics = [
-  { category: "Resolved", color: "#4ECDC4" },
-  { category: "In Progress", color: "#45B7D1" },
-  { category: "Waiting", color: "#FFA07A" },
-  { category: "Escalated", color: "#FF6B6B" },
-  { category: "Abandoned", color: "#FFD700" }  // Added a gold color for the fifth category
+  { category: "Resolved", color: "#00BFFF" },    // Bright Sky Blue
+  { category: "In Progress", color: "#1E90FF" }, // Dodger Blue
+  { category: "Waiting", color: "#4169E1" },     // Royal Blue
+  { category: "Escalated", color: "#9932CC" },   // Dark Orchid
+  { category: "Abandoned", color: "#8A2BE2" }    // Blue Violet
 ];
 
 function generateScenarioData(chaosLevel) {

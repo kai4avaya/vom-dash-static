@@ -8,7 +8,7 @@ const sampleData = [
       { "category": "City Response", "value": 0 }
 ]
 export function createBarChart(data = sampleData, { width = 700, height = 400 } = {}) {
-  const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A"];
+  const colors = ["#00BFFF", "#1E90FF", "#9932CC", "#8A2BE2"];
 
   function updateChart() {
     return Plot.plot({
