@@ -13,3 +13,6 @@ Next
 - copy paste the `dist/assets/index...js` into the `index.js` in this project
 - similarly, paste the `dist/assets/index...css` into the `index.css` in this project
 
+
+
+NOTES
