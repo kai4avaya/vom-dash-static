@@ -17,6 +17,7 @@
       /* Light grey background */
     }
 
+
     .playground-topnav {
       z-index: 1000;
     }
@@ -222,11 +223,1084 @@
     }
 
     .main-data {
-  padding-left: 5%;
-  padding-right: 5%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    #table-1606851494184 {
+      position: absolute;
+      left: 178px;
+      top: 537px;
+      width: 140px;
+      height: 58px;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 9px;
+      color: #000000;
+      font-family: noto-sans, sans-serif;
+      font-weight: normal;
+      border: none;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    .analystTaskNode {
+      display: flex;
+      flex-direction: column;
+      width: 150px;
+    }
+
+    .AnalystTask_header {
+      background-color: #E8F1FC;
+    }
+
+    .AnalystTask_body {
+      flex-grow: 1;
+    }
+
+    .workflow-container {
+      width: 100%;
+      height: 753px;
+      /* Adjust based on your SVG's height */
+      overflow: hidden;
+    }
+
+    #emergency_workflow {
+      position: relative;
+      padding-top: 40px;
+      /* Adjust this value based on your title's height */
+    }
+
+    .workflow-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 10px 0;
+      background-color: #f0f0f0;
+      /* Optional: adds a background to the title */
+      z-index: 1;
+      /* Ensures the title is above the workflow content */
+    }
+
+    .workflow-container {
+      position: relative;
+      /* Other existing styles */
+    }
+
+
+
+    /* NODES */
+
+    .analystTaskNode {
+      background-color: white;
+      /*border: 1px solid #a9a9a9;
+    box-shadow: 0px 0px 2px 1px #ececec;*/
+      /*box-shadow: 0px 0px 2px 1px #a9a6a6;*/
+      /*box-shadow: 0px 3px 6px #00000029;*/
+      /*box-shadow: 0px 0px 2px 1px #00000029;*/
+      box-sizing: border-box;
+      border-radius: 5px;
+      width: 140px !important;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      cursor: pointer;
+    }
+
+    .analystTaskLabel {
+      line-height: 25px;
+      height: 25px;
+      font-size: 12px;
+      text-shadow: 0px 0px 1px #767676;
+      text-align: left;
+      float: left;
+      padding: 0px 0px 0px 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 106px;
+      color: #5b646e;
+    }
+
+    .analystTaskLabel>label:hover {
+      background: #ecf4fb;
+      /* box-shadow: 0px 0px 1px 0px #000000; */
+      border-radius: 2px;
+      display: unset !important;
+    }
+
+    .analystTaskLabel:hover {
+      overflow: unset;
+    }
+
+    .AnalystTask_header {
+      height: 51px;
+      background-color: #ecf4fb;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      padding: 2px 4px 5px 4px;
+      user-select: none;
+      border-color: #ABCCF5;
+      border: 1px solid #ABCCF5;
+      border-bottom: none;
+      z-index: 1;
+    }
+
+    .AnalystTask_header_error {
+      min-height: 25px;
+      background-color: #FCECEB;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      padding: 5px;
+    }
+
+    .analystTask_connection {
+      height: 24px;
+      border-bottom: 1px solid #dce1e6;
+      padding: 0px 0px;
+      line-height: 24px;
+      text-align: left;
+      font-size: 10px;
+      padding: 0px 0px 0px 9px;
+      /* text-shadow: 0px 0px 0px #272829; */
+      color: #3c5064;
+      text-overflow: ellipsis;
+      white-space: normal;
+      overflow: hidden;
+    }
+
+    .analystTask_connection_label {
+      background: #ffffff;
+      color: #476d8f;
+      border-radius: 10px;
+      float: right;
+      width: 15px;
+      height: 15px;
+      margin: 5px;
+      line-height: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 11px;
+      box-shadow: 0px 0px 1px 1px grey;
+    }
+
+    .AnalystTask_incoming_line_object {
+      width: 10px;
+      height: 20px;
+      /* background: #3c5064; */
+      background-color: #4068b2;
+      position: absolute;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      left: -10px;
+      top: 5px;
+    }
+
+    .analystTaskNode::before {
+      width: 12px;
+      height: 12px;
+      background-color: #1473E6;
+      position: absolute;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      left: -7px;
+      top: 7px;
+      content: "";
+      z-index: 0;
+    }
+
+    .Analysttask_connection_error {
+      border-bottom: none;
+    }
+
+    #instanceViewer>table>tbody>tr>td {
+      /* -webkit-box-sizing: none !important; 
+    -moz-box-sizing: none !important; */
+      box-sizing: unset !important;
+      vertical-align: bottom !important;
+    }
+
+    .analystTaskLabel>label {
+      /*--tagify-dd-color-primary: rgb(53,149,246);
+    --tagify-dd-bg-color: white;
+    font: normal 12px tahoma, arial, verdana, sans-serif;
+    border-collapse: collapse;
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+    font-weight: normal;
+    white-space: nowrap;
+    line-height: 25px;
+    font-size: 12px;
+    text-shadow: 0px 0px 1px #3c5064;
+    text-align: left;*/
+      --tagify-dd-color-primary: rgb(53, 149, 246);
+      --tagify-dd-bg-color: white;
+
+      border-collapse: collapse;
+      font-weight: normal;
+      white-space: nowrap;
+
+      user-select: none;
+      line-height: 25px;
+      font-size: 12px;
+      text-shadow: 0px 0px 1px #767676;
+      text-align: left;
+      color: #5b646e;
+    }
+
+    .analystTaskNode>div.AnalystTask_header>div:nth-child(2)>label {
+      border-collapse: collapse;
+      font-weight: normal;
+      user-select: none;
+      text-align: left;
+      font-size: 9px;
+      white-space: normal;
+      line-height: 10px;
+      color: #081723;
+      margin-left: 4px;
+      height: 20px;
+    }
+
+    .analystTaskNode>div.AnalystTask_header>div:nth-child(2) {
+      /* overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 140px; */
+    }
+
+    .modal-body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .modal-body::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .InstanceWorkflowTitleBox {
+      position: fixed;
+      bottom: 0px;
+      left: 15px;
+      width: 362px;
+      padding: 0 20px 0 20px;
+      background: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 8px 8px 0px 0px;
+      transition: height 1s;
+    }
+
+    .InstanceWorkflowTitleBox .content {
+      display: none;
+    }
+
+
+    .InstanceWorkflowTitleBox .open {
+      height: 210px;
+    }
+
+    .InstanceWorkflowTitleBoxInterrupted {
+      height: 80px;
+    }
+
+    .InstanceWorkflowTitleBoxInterrupted.open {
+      height: 230px;
+    }
+
+    .toggleInstance {
+      padding-top: 20px;
+      display: block;
+      cursor: pointer;
+    }
+
+    .toggleInstance label {
+      cursor: pointer;
+    }
+
+    .InstanceWorkflowTitleBox .toggleInstance::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      border: 2px solid #0b3363;
+      left: 50%;
+      margin-left: -16px;
+      top: 10px;
+      cursor: pointer;
+    }
+
+    .InstanceWorkflowwfdDiv {
+      margin: 0 0 6px 0;
+      color: #3c5064;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: flex;
+    }
+
+    .InstanceWorkflowwfdDivContainer {
+      margin: 0 0 6px 0;
+      color: #3c5064;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+
+    .InstanceWorkflowwfdLabelValue {
+      text-align: right;
+      font-size: 14px;
+      color: #000000;
+      font-weight: 600;
+      text-wrap: wrap;
+    }
+
+    .InstanceWorkflowwfdLabelHeading {
+      margin: 0px;
+      font-size: 14px;
+      color: #000;
+      flex: 2;
+      font-weight: 400;
+    }
+
+    .InstanceWorkflowwfdDiv:nth-child(1) .InstanceWorkflowwfdLabelHeading {
+      font-size: 16px;
+    }
+
+    .InstanceWorkflowwfdDiv:nth-child(1) .InstanceWorkflowwfdLabelValue {
+      font-weight: normal;
+    }
+
+    .InstanceWorkflowaddReference {
+      display: flex;
+      border: 1px solid #cacaca;
+      position: fixed;
+      top: 90px;
+      right: 10px;
+      /* max-width: 500px;
+    width: 400px; */
+      border-radius: 5px;
+      background: #f7f7f7;
+      padding: 5px 10px;
+    }
+
+    .InstanceWorkflowLabel {
+      margin: auto 5px;
+      font-weight: unset;
+    }
+
+    .InstanceWorkflowSpan {
+      height: 15px;
+      margin-right: 10px;
+    }
+
+    .InstanceWorkflowCompleteSpan {
+      width: 15px;
+      height: 15px;
+      background-color: green;
+      display: inline-block;
+    }
+
+    .InstanceWorkflowActiveSpan {
+      width: 15px;
+      height: 15px;
+      background-color: #f7941e;
+      display: inline-block;
+    }
+
+    .InstanceWorkflowTerminateSpan {
+      width: 15px;
+      height: 15px;
+      background-color: #ff0000;
+      display: inline-block;
+    }
+
+    .InstanceWorkflowTimeOutSpan {
+      width: 15px;
+      height: 15px;
+      background-color: #0000ff;
+      display: inline-block;
+    }
+
+    /* .analystTaskNode > div.AnalystTask_header > div:nth-child(2) > label:hover {
+    background: #ecf4fb;
+    max-width: unset !important;
+    display: unset !important;
 }
+  */
+
+    .markNode_Blue {
+      box-shadow: 0px 0px 2px 3px #39d5ff;
+      /* background: #39d5ff47; */
+    }
+
+    .markNode_Blue>div.AnalystTask_body>div.analystTask_connection {
+      border-bottom: 1px solid #39d5ff;
+    }
+
+    .markNode_Blue>div.AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    .markNode_Terminated {
+      box-shadow: 0px 0px 2px 3px #edbfbb;
+      background: #fff;
+    }
+
+    .markNode_Terminated>div.AnalystTask_body>div.analystTask_connection {
+      border-bottom: 1px solid #737373;
+    }
+
+    .markNode_Terminated>div.AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    .markNode_Completed {
+      box-shadow: 0px 0px 2px 3px #9cd99c;
+      /* background: #00800036; */
+    }
+
+    .markNode_Completed>div.AnalystTask_body>div.analystTask_connection {
+      border-bottom: 1px solid #737373;
+    }
+
+    .markNode_Completed>div.AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    .markNode_Active {
+      box-shadow: 0px 0px 2px 3px #1473e6;
+      animation: markNode_Active 2s ease infinite;
+      /* -webkit-animation: pulse 1.5s infinite; */
+      /* background: #f7941e6b; */
+      /* animation: blink-animation 1s steps(5, start) infinite; */
+      /* -webkit-animation: blink-animation 1s steps(10, start) infinite; */
+    }
+
+    @keyframes markNode_Active {
+      0% {
+        box-shadow: 0 0 0 0 rgba(20, 115, 230, 0.7), 0px 0px 2px 1px #a9a6a6;
+      }
+
+      70% {
+        box-shadow: 0 0 2px 3px rgba(20, 115, 230, 1), 0px 0px 2px 1px #a9a6a6;
+      }
+
+      to {
+        box-shadow: 0 0 0px 0px rgba(20, 115, 230, 0), 0px 0px 2px 1px #a9a6a6;
+      }
+    }
+
+    @keyframes blink-animation {
+      to {
+        box-shadow: 0px 0px 2px 3px #ffffffff;
+      }
+    }
+
+    @-webkit-keyframes blink-animation {
+      to {
+        box-shadow: 0px 0px 2px 3px #ffffffff;
+      }
+    }
+
+    .markNode_Active>div.AnalystTask_body>div.analystTask_connection {
+      border-bottom: 1px solid #737373;
+    }
+
+    .markNode_Active>div.AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    .markNode_TimedOut {
+      box-shadow: 0px 0px 2px 3px #1473e6;
+      /* background: #0000ff40; */
+    }
+
+    .markNode_TimedOut>div.AnalystTask_body>div.analystTask_connection {
+      border-bottom: 1px solid #737373;
+    }
+
+    .markNode_TimedOut>div.AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    label.TaskDetailItemLabelHeading {
+      width: 160px;
+      margin-bottom: 0px;
+      font-size: 13px;
+    }
+
+    label.TaskDetailItemLabelValue {
+      font-weight: unset;
+      margin-bottom: 0px;
+    }
+
+    .TaskDetailItemDiv {
+      padding: 5px 10px;
+    }
+
+    .TaskDetailItemDiv>label {
+      padding: 0px 10px 0px 0px;
+    }
+
+    #task_accordion {
+      margin: 25px 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .AnalystTask_body>div.analystTask_connection:last-child {
+      border-bottom: unset;
+    }
+
+    .analystTaskName_EndTask .AnalystTask_header {
+      border-radius: 5px;
+    }
+
+    /* .errorDetailErrored {
+    position: fixed;
+    bottom: 5px;
+    box-shadow: 0px 0px 1px 1px #b4a6a6;
+    left: 10px;
+    padding: 1px 15px;
+    border-radius: 5px;
+    background: #a4a4a438;
+    width: 99%;
+    box-sizing: border-box;
+} */
+    .errorDetailErrored {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      /* box-shadow: 0px 0px 5px 1px rgba(189, 168, 189, 1); */
+      box-shadow: 0px 4px 8px rgb(0 0 0 / 25%);
+      padding: 0px 0px 0px 0px;
+      /* border-radius: 5px; */
+      background: white;
+      width: 50%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .errorDetailErrored>img {
+      height: 25px;
+      margin: 0px 10px 0px 0px;
+    }
+
+    .errorDetailErrored>label {
+      font-weight: unset;
+    }
+
+    .errorDetailErrored_footer_toggle {
+      cursor: pointer;
+      float: right;
+      position: relative;
+      right: 0px;
+      bottom: 26px;
+    }
+
+    .inner_errorDetailBox {
+      /* box-shadow: inset 1px -1px 3px 1px #bbb9b9; */
+      width: 100%;
+    }
+
+    .errorDetailErrored_footer {
+      background: #395269;
+      padding: 5px 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .errorDetailErrored_body {
+      /* min-height: 100px; */
+      max-height: 100px;
+      padding: 5px 10px;
+      overflow-x: hidden;
+      /* box-shadow: inset 0px 1px 4px 1px #a3a3a3; */
+    }
+
+    .terReaMsgBody {
+      max-height: 130px;
+      overflow: auto;
+      padding: 0px;
+      border: 1px solid gainsboro;
+      border-radius: 3px;
+      padding: 5px;
+      box-shadow: inset 1px 1px 4px grey;
+      min-height: 50px;
+      width: -webkit-fill-available;
+      font-size: 12px;
+    }
+
+    .TaskDetailItemDiv>div>img {
+      float: right;
+      cursor: pointer;
+    }
+
+    .TaskDetailItemDiv>div>img:active {
+      transform: translateY(4px);
+    }
+
+    .Analysttask_tiny_error_num {
+      width: 15px;
+      height: 15px;
+      background: #e3e1e1;
+      position: absolute;
+      border-radius: 10px;
+      top: -5px;
+      right: -10px;
+      padding: 0px 2px;
+      color: #445565;
+      line-height: 15px;
+      font-weight: bold;
+      box-shadow: 0px 0px 3px 1px #445565;
+      font-size: 15px;
+    }
+
+    .Analysttask_tiny_error_num>label {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .errorLinkTask {
+      box-sizing: content-box;
+    }
+
+    .AnalystTask_header_error {
+      height: 25px;
+      background-color: #FCECEB;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      padding: 2px 4px 5px 4px;
+      user-select: none;
+      position: relative;
+      border: 1px solid #EDBFBB;
+      border-bottom: none;
+      box-sizing: content-box;
+    }
+
+    .analystTaskName_ErrorHandler::before {
+      background-color: #00000000;
+    }
+
+    .node_error_link {
+      float: right;
+      margin: 4px 5px 0px 0px;
+      width: 15px;
+      height: 15px;
+    }
+
+    #instanceViewerDialog .taskstatus .statusleft {
+      float: left;
+    }
+
+    #instanceViewerDialog .taskstatus .statusright {
+      float: right;
+      text-align: right;
+      position: relative;
+    }
+
+    .taskstatus.completed,
+    .taskstatus.active,
+    .taskstatus.terminated,
+    .taskstatus.timeout,
+    .taskstatus.error {
+      background: #f1f1f1;
+      margin: 0px 0px 9px 0px;
+      padding: 10px;
+    }
+
+    .taskstatus.active {
+      background: #e8f1fc;
+    }
+
+    .taskstatus.completed .statusleft,
+    .taskstatus.terminated .statusleft,
+    .taskstatus.timeout .statusleft,
+    .taskstatus.error .statusleft {
+      padding: 4px 10px 4px 28px;
+      /* background: #e4f7e4 url(../../images/completed.png) 6px center no-repeat; */
+      border: 1px solid #51a651;
+      box-sizing: border-box;
+      border-radius: 4px;
+      text-transform: lowercase;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    .taskstatus.completed .statusleft:first-letter,
+    .taskstatus.error .statusleft:first-letter,
+    .taskstatus.terminated .statusleft:first-letter,
+    .taskstatus.timeout .statusleft:first-letter,
+    .InstanceWorkflowwfdLabelValue.completed:first-letter {
+      text-transform: uppercase;
+    }
+
+    .taskstatus.error .statusleft {
+      /* background: #FCEEE8 url(../../images/instanceviewer/error.png) 6px center no-repeat; */
+      border: 1px solid #CC4D1B;
+    }
+
+    .taskstatus.terminated .statusleft {
+      /* background: #E0BBF2 url(../../images/instanceviewer/terminated.png) 6px center no-repeat; */
+      border: 1px solid #E0BBF2;
+      padding-left: 33px;
+    }
+
+    .taskstatus.timeout .statusleft {
+      /* background: #F1F1F1 url(../../images/instanceviewer/timeout.png) 6px center no-repeat; */
+      border: 1px solid #939393;
+    }
+
+    .InstanceWorkflowwfdLabelValue.active,
+    .taskstatus.active .statusleft {
+      color: #125ab3;
+      font-size: 16px;
+    }
+
+    .InstanceWorkflowwfdLabelValue.completed {
+      padding: 4px 8px 4px 25px;
+      /* background: #e4f7e4 url(../../images/completed.png) 6px center no-repeat; */
+      border: 1px solid #51a651;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 98px;
+      text-transform: lowercase;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .InstanceWorkflowwfdLabelValue.terminate {
+      padding: 4px 8px 4px 25px;
+      background: #fceee8 url(../../images/failed.png) 6px center no-repeat;
+      border: 1px solid #cc4d1b;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 92px;
+      text-transform: lowercase;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .InstanceWorkflowwfdLabelValue.errored {
+      padding: 4px 8px 4px 25px;
+      /* background: #fceee8 url(../../images/failed.png) 6px center no-repeat; */
+      border: 1px solid #cc4d1b;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 140px;
+      text-align: center;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .InstanceWorkflowwfdLabelValue.UnhandledErrored {
+      padding: 4px 8px 4px 25px;
+      /* background: #fceee8 url(../../images/failed.png) 6px center no-repeat; */
+      border: 1px solid #cc4d1b;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 170px;
+      text-align: center;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .InstanceWorkflowwfdLabelValue.fatal_error {
+      padding: 4px 8px 4px 25px;
+      /* background: #fceee8 url(../../images/failed.png) 6px center no-repeat; */
+      border: 1px solid #cc4d1b;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 95px;
+      font-size: 12px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .markNode_Terminated::after {
+      /* content: url("../../images/instanceviewer/failed.png"); */
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      z-index: 1;
+    }
+
+    .statusright::before {
+      /* content: url(../../images/instanceviewer/timer.png); */
+      position: absolute;
+      left: -20px;
+      top: 1px;
+    }
+
+    #task_accordion::before {
+      background: #eee;
+      height: calc(100%);
+      width: 4px;
+      position: absolute;
+      content: "";
+      left: 0px;
+      top: 0px;
+      transition: height linear 400ms;
+    }
+
+    #task_accordion h3.ui-accordion-header {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    #task_accordion h3.ui-accordion-header .time {
+      float: right;
+      padding-right: 35px;
+    }
+
+    #task_accordion h3.ui-accordion-header .time.completed {
+      /* background: url(../../images/instanceviewer/status_completed.png) 78% 0px no-repeat; */
+    }
+
+    #task_accordion h3.ui-accordion-header .time.error {
+      /* background: url(../../images/instanceviewer/error.png) 76% 3px no-repeat; */
+    }
+
+    #task_accordion h3.ui-accordion-header .time.terminated {
+      /* background: url(../../images/instanceviewer/terminated.png) 80% 0px no-repeat; */
+    }
+
+    #task_accordion h3.ui-accordion-header .time.timeout {
+      /* background: url(../../images/instanceviewer/timeout.png) 76% 1px no-repeat; */
+    }
+
+    #task_accordion h3.ui-accordion-header::before {
+      position: absolute;
+      content: "";
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      left: -25px;
+      background: #fff;
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #task_accordion h3.outputresult .ui-accordion-header-icon {
+      top: 34%;
+    }
+
+    #task_accordion .ui-accordion-icons {
+      padding: 12px 16px 12px 16px;
+      background: none;
+      margin-top: 8px;
+    }
+
+    #task_accordion .ui-accordion-header .ui-accordion-header-icon {
+      left: auto;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-20%);
+      margin: 0;
+    }
+
+    #task_accordion .ui-state-default .ui-icon {
+      /* background: url(../../images/instanceviewer/openaccordion.png) right top no-repeat; */
+    }
+
+    #task_accordion .ui-state-active .ui-icon {
+      /* background: url(../../images/instanceviewer/closeaccordion.png) right top no-repeat; */
+    }
+
+    #task_accordion .ui-state-active {
+      border-bottom: 0;
+    }
+
+    #task_accordion .ui-state-focus {
+      outline: none;
+    }
+
+    #task_accordion .ui-accordion-header span.createddate {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    #instanceViewerDialog .neo-modal__header>h4 span.version {
+      font-size: 13px;
+      color: #555555;
+    }
+
+    .instancecontent g,
+    .instancecontent table {
+      font-family: noto-sans !important;
+    }
+
+    .incomingdata .TaskDetailItemDiv.show {
+      display: flex !important;
+    }
+
+    .incomingdata label.TaskDetailItemLabelHeading {
+      min-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .AnalystTask_body {
+      border: 1px solid #C9C9C9;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .analystTaskName_ErrorHandler .analystTaskLabel {
+      padding-left: 5px;
+    }
+
+    .analystTaskName_ErrorHandler::before {
+      background: none;
+    }
+
+    .instancedata>table {
+      background-repeat: repeat;
+      /* background-image: url(./images/grid.gif); */
+      height: max-content;
+      width: -webkit-fill-available;
+    }
+
+    .analystTaskNode .deprecatedicon,
+    .analystTaskNode .obsoleteicon {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .analystTaskNode .obsoleteicon {
+      color: #125AB3;
+    }
+
+    .obsolete .AnalystTask_header,
+    .obsolete .analystTaskLabel>label:hover,
+    .obsolete.analystTaskNode>div.AnalystTask_header>div:nth-child(2)>label:hover {
+      background-color: #FCECEB !important;
+    }
+
+    .analystTaskNode .deprecatedicon {
+      color: #E67300;
+    }
+
+    .markNode_Terminated.deprecated::after,
+    .markNode_Terminated.obsolete::after {
+      right: auto;
+      left: -10px;
+      top: -10px;
+    }
+
+    .instancedata .markCircleNode {
+      cursor: pointer;
+    }
+
+    #multipleInstances {
+      background: white;
+      display: flex;
+      box-shadow: 0px 0px 1px 1px #c1c1c1;
+      flex-direction: column;
+      width: 300px;
+      padding: 2px;
+      position: fixed;
+      display: none;
+    }
+
+    #multipleInstances .statusright::before {
+      /* content: url(../../images/instanceviewer/timer.png); */
+      position: relative;
+      left: -2px;
+      top: 3px;
+    }
+
+    #multipleInstances .eachInstance {
+      border: 1px solid #d7d7d7;
+      margin: 2px;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+
+    }
+
+    #multipleInstances .eachInstance .title {
+      cursor: pointer;
+    }
+
+    #multipleInstances .eachInstance:hover {
+      background: #f3f3f3;
+    }
+
+    #multipleInstances .eachInstance span:nth-child(1) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #multipleInstances .eachInstance span.timings {
+      display: flex;
+      font-size: 10px;
+      font-weight: normal;
+      color: grey;
+      cursor: pointer;
+    }
+
+    #multipleInstances span.crossIcon {
+      margin: 0px 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #multipleInstances span.crossIcon:hover {
+      text-shadow: 0 0 2px #918a8a;
+    }
+
+    #multipleInstances .eachInstance span.timings label.key {
+      margin-right: 5px;
+      font-weight: 400;
+      cursor: pointer;
+      color: #939393;
+    }
+
+    #multipleInstances .eachInstance span.timings label.value {
+      cursor: pointer;
+      font-weight: 400;
+      color: #323232;
+    }
+
+    #multipleInstances .eachInstances {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    #multipleInstances>div:nth-child(1)>label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0px 10px;
+    }
+
+    /* Add more specific styles as needed */
   </style>
-  <script type="module" crossorigin src="/vom_dash/assets/index-F781rUqI.js"></script>
+  <script type="module" crossorigin src="/vom_dash/assets/index-Df4JQRHS.js"></script>
   <link rel="stylesheet" crossorigin href="/vom_dash/assets/index-BaDADsln.css">
 </head>
 
@@ -283,13 +1357,7 @@
 
 
         <div class="neo-nav">
-          <!-- <div id="custom-switch-container" class="custom-neo-form-control">
-            <label class="custom-neo-switch" for="scroll-switch">
-              <input id="scroll-switch" type="checkbox" role="switch" checked>
-              <i class="custom-neo-switch__icon"></i>
-              Auto Scroll
-            </label>
-          </div> -->
+
           <div class="neo-badge__navbutton">
             <button class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on" aria-label="notifications">
             </button>
@@ -318,49 +1386,38 @@
   <div class="main-data">
 
 
-    <div
-  class="neo-notification neo-notification--info" style="display: none;"
-  role="alert"
-  aria-live="polite"
->
-  <div
-    role="img"
-    class="neo-notification__icon"
-    aria-label="icon"
-  >
-  </div>
-  <div class="neo-notification__message">
-    <div class="neo-notification__message__wrapper">
-      <p class="neo-notification__timestamp neo-body-small neo-semibold">
-        09/16/2024, 11:08 AM
-      </p>
-    </div>
-    <div class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated">
-      Info
-    </div>
-    <div class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated">
-      Predicted Emergency Notice
-    </div>
-    <div class="neo-notification__actions--multiline">
-      <div class="neo-notification__options">
-        <button
-          class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
-          data-badge
-        >
-          Edit
-        </button>
-        <button
-          class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
-          data-badge
-        >
-          Alert
-        </button>
+    <div class="neo-notification neo-notification--info" style="display: none;" role="alert" aria-live="polite">
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small neo-semibold">
+            09/16/2024, 11:08 AM
+          </p>
+        </div>
+        <div class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated">
+          Info
+        </div>
+        <div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated">
+          Predicted Emergency Notice
+        </div>
+        <div class="neo-notification__actions--multiline">
+          <div class="neo-notification__options">
+            <button class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+              data-badge>
+              Edit
+            </button>
+            <button class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+              data-badge>
+              Alert
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="neo-notification__actions">
       </div>
     </div>
-  </div>
-  <div class="neo-notification__actions">
-  </div>
-</div>
 
     <!-- Counter Panels -->
     <div class="counter-grid">
@@ -387,22 +1444,1277 @@
       <div class="panel" id="pie-panel"></div>
       <div class="panel" id="line-graph-static-panel"></div>
       <div class="panel" id="multi-area-panel"></div>
-      <!-- <div class="panel" id="earthquake-globe-panel"></div>
-        <div class="panel" id="world-map-panel"></div>
-        <div class="panel" id="hexabin-panel"></div>
-        <div class="panel" id="piechart-panel"></div>
-        <div class="panel" id="dot-panel"></div>
-        <div class="panel" id="pie-panel"></div>
-        <div class="panel" id="force-graph-panel"></div>
-        <div class="panel" id="sensor-graph-panel"></div> -->
-
-
 
 
     </div>
 
+    <div class="panel bottom-panel" id="emergency_workflow_non">
+      <h2 class="workflow-title">Daily Workflow</h2>
+      <div class="workflow-container" style="position: relative;">
+        <table
+          style="border-collapse: collapse; position: absolute; font-size: 12px; color: rgb(0, 0, 0); font-family: Verdana; font-weight: normal; border-style: none; left: 0px;">
+          <tbody>
+            <tr id="svg_6f17019f-b2f8-4f6f-8823-3c04d0e0a64b"><svg width="1159.5" height="753">
+              <g>
+                <text x="10" y="30" font-family="Arial, sans-serif" font-size="20" fill="#333333" font-weight="bold">
+                  Daily Call Center Workflow
+                </text>
+                <g></g>
+                <g>
+                  <g></g>
+                  <g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/StartTask.png" style="pointer-events:none" stroke-width="1" x="70"
+                        y="145" width="29" height="29" rx="4.35" ry="4.35" transform=" scale(1 1) translate(0 0)">
+                      </image>
+                      <rect stroke="none" fill="none" id="1606851494183" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="70" y="145" width="29" height="29" rx="4.35" ry="4.35"></rect>
+                      <image href="/vom_dash/assets/GreenEvent.png" x="63" y="139" width="40" height="40" class="markCircleNode"
+                        data-taskId="1606851494183"></image>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="71" y="177" width="29" height="29"
+                        stroke-width="1"></rect><text text-decoration="inherit" x="84.5" y="185.7"
+                        style="pointer-events: all">StartTask</text>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1606851494184" pointer-events="all" stroke-width="1"
+                        x="178" y="535" width="140" height="58" rx="8.7" ry="8.7"></rect>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130476317" pointer-events="all" stroke-width="1"
+                        x="402" y="140.80000001192093" width="140" height="150" rx="21" ry="21"></rect>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130756114" pointer-events="all" stroke-width="1"
+                        x="941.5" y="434.80000001192093" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/EndTask.png" style="pointer-events:none" stroke-width="1" x="1129.5"
+                        y="249.80000001192093" width="29" height="29" rx="4.35" ry="4.35"
+                        transform=" scale(1 1) translate(0 0)"></image>
+                      <rect stroke="none" fill="none" id="1646130786497" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="1129.5" y="249.80000001192093" width="29" height="29" rx="4.35" ry="4.35">
+                      </rect>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="1130.5" y="281.80000001192093"
+                        width="29" height="29" stroke-width="1"></rect><text text-decoration="inherit" x="1144"
+                        y="290.5000000119209" style="pointer-events: all">EndTask5</text>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1646130795668" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 1081 499 L 1093 499 C 1105 499 1105,499 1105 479 L 1105 284 C 1105 264 1105,264 1117 264 L 1125 264 ">
+                      </path>
+                      <path id="1646130795668" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1082 496.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1646130795668" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1129 264.30000001192093 L 1123 267.30000001192093 L 1124.5 264.30000001192093 L 1123 261.30000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1646130795668"
+                        d="M 1081 499 L 1093 499 C 1105 499 1105,499 1105 479 L 1105 284 C 1105 264 1105,264 1117 264 L 1125 264 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130861139" pointer-events="all" stroke-width="1"
+                        x="683" y="540.2000015377998" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/EndTask.png" style="pointer-events:none" stroke-width="1" x="912.5"
+                        y="564" width="29" height="29" rx="4.35" ry="4.35" transform=" scale(1 1) translate(0 0)">
+                      </image>
+                      <rect stroke="none" fill="none" id="1646130883724" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="912.5" y="564" width="29" height="29" rx="4.35" ry="4.35"></rect>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="913.5" y="596" width="29"
+                        height="29" stroke-width="1"></rect><text text-decoration="inherit" x="927" y="604.7"
+                        style="pointer-events: all">EndTask3</text>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1646130887528" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 823 605 L 847 605 C 867 605 867,605 867 591 L 867 591 C 867 578 867,578 887 578 L 908 578 ">
+                      </path>
+                      <path id="1646130887528" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 823.5 601.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1646130887528" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 912 578.5 L 906 581.5 L 907.5 578.5 L 906 575.5 z"></path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1646130887528"
+                        d="M 823 605 L 847 605 C 867 605 867,605 867 591 L 867 591 C 867 578 867,578 887 578 L 908 578 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1652376634452" pointer-events="all" stroke-width="1"
+                        x="728.6666666666665" y="227.80000001192093" width="140" height="54" rx="8.1" ry="8.1"></rect>
+                    </g>
+                    <g>
+                      <!-- <path stroke="#9CD99C" fill="none" id="1652376724151" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 542 253 L 615 253 C 635 253 635,253 635 248 L 635 248 C 635 242 635,242 655 242 L 719 242 "
+                        stroke-dasharray="3,3"></path> -->
+                        <path stroke="#9CD99C" fill="none" id="1652376724151" pointer-events="visibleStroke" stroke-width="4"
+                        d="M 542 253 L 615 253 C 635 253 635,253 635 248 L 635 248 C 635 242 635,242 655 242 L 719 242"
+                        stroke-dasharray="6,6">
+                    <animate attributeName="stroke-dashoffset" values="12;0" dur="0.5s" repeatCount="indefinite" />
+                    <animate attributeName="stroke-opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite" />
+                  </path>
+                      <path id="1652376724151" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 250.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1652376724151" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 723.1666666666665 242.80000001192093 L 717.1666666666665 245.80000001192093 L 718.6666666666665 242.80000001192093 L 717.1666666666665 239.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1652376724151"
+                        d="M 542 253 L 615 253 C 635 253 635,253 635 248 L 635 248 C 635 242 635,242 655 242 L 719 242 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1663162416112" pointer-events="all" stroke-width="1"
+                        x="728.6666666666664" y="43.5" width="140" height="150" rx="21" ry="21"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162420270" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 542 229 L 664 229 C 684 229 684,229 684 209 L 684 78 C 684 58 684,58 703 58 L 719 58 ">
+                      </path>
+                      <path id="1663162420270" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 226.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162420270" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 723.1666666666664 58.5 L 717.1666666666664 61.5 L 718.6666666666664 58.5 L 717.1666666666664 55.5 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162420270"
+                        d="M 542 229 L 664 229 C 684 229 684,229 684 209 L 684 78 C 684 58 684,58 703 58 L 719 58 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1663162427600" pointer-events="all" stroke-width="1"
+                        x="941.5" y="310.800000011921" width="140" height="54" rx="8.1" ry="8.1"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162439859" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 156 L 979 156 C 999 156 999,156 999 176 L 999 244 C 999 264 999,264 1019 264 L 1125 264 ">
+                      </path>
+                      <path id="1663162439859" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 153 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162439859" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1129 264.30000001192093 L 1123 267.30000001192093 L 1124.5 264.30000001192093 L 1123 261.30000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162439859"
+                        d="M 868 156 L 979 156 C 999 156 999,156 999 176 L 999 244 C 999 264 999,264 1019 264 L 1125 264 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162442369" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 728 132 L 655 132 C 635 132 635,132 635 144 L 635 144 C 635 155 635,155 615 155 L 546 155 ">
+                      </path>
+                      <path id="1663162442369" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.1666666666664 136 a 3.5 3.5 0  1,1 1 0 z" stroke-width="1"></path>
+                      <path id="1663162442369" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 155.80000001192093 L 548.5 152.80000001192093 L 547 155.80000001192093 L 548.5 158.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162442369"
+                        d="M 728 132 L 655 132 C 635 132 635,132 635 144 L 635 144 C 635 155 635,155 615 155 L 546 155 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162444693" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 108 L 882 108 C 896 108 896,108 896 128 L 896 429 C 896 449 896,449 916 449 L 932 449 ">
+                      </path>
+                      <path id="1663162444693" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 105 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162444693" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 936 449.80000001192093 L 930 452.80000001192093 L 931.5 449.80000001192093 L 930 446.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162444693"
+                        d="M 868 108 L 882 108 C 896 108 896,108 896 128 L 896 429 C 896 449 896,449 916 449 L 932 449 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1669284933795" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 180 L 886 180 C 905 180 905,180 905 200 L 905 305 C 905 325 905,325 920 325 L 932 325 "
+                        stroke-dasharray="3,3"></path>
+                      <path id="1669284933795" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 177 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1669284933795" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 936 325.800000011921 L 930 328.800000011921 L 931.5 325.800000011921 L 930 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1669284933795"
+                        d="M 868 180 L 886 180 C 905 180 905,180 905 200 L 905 305 C 905 325 905,325 920 325 L 932 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1677594696558" pointer-events="all" stroke-width="1"
+                        x="734.1999969482422" y="310.800000011921" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <!-- <path stroke="#9CD99C" fill="none" id="1677594700540" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 542 253 L 618 253 C 638 253 638,253 638 273 L 638 305 C 638 325 638,325 658 325 L 724 325 "
+                        stroke-dasharray="3,3"></path> -->
+                        <path stroke="#9CD99C" fill="none" id="1677594700540" pointer-events="visibleStroke" stroke-width="4"
+      d="M 542 253 L 618 253 C 638 253 638,253 638 273 L 638 305 C 638 325 638,325 658 325 L 724 325"
+      stroke-dasharray="6,6">
+  <animate attributeName="stroke-dashoffset" values="12;0" dur="0.5s" repeatCount="indefinite" />
+  <animate attributeName="stroke-opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite" />
+</path>
+                      <path id="1677594700540" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 250.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594700540" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.6999969482422 325.800000011921 L 722.6999969482422 328.800000011921 L 724.1999969482422 325.800000011921 L 722.6999969482422 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594700540"
+                        d="M 542 253 L 618 253 C 638 253 638,253 638 273 L 638 305 C 638 325 638,325 658 325 L 724 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1677594718118" pointer-events="all" stroke-width="1"
+                        x="432.1999969482422" y="540.2000015377998" width="140" height="102" rx="15.299999999999999"
+                        ry="15.299999999999999"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594722278" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 318 580 L 355 580 C 375 580 375,580 375 567 L 375 567 C 375 555 375,555 395 555 L 422 555 ">
+                      </path>
+                      <path id="1677594722278" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 318.5 576.5 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594722278" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 426.6999969482422 555.2000015377998 L 420.6999969482422 558.2000015377998 L 422.1999969482422 555.2000015377998 L 420.6999969482422 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594722278"
+                        d="M 318 580 L 355 580 C 375 580 375,580 375 567 L 375 567 C 375 555 375,555 395 555 L 422 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594742472" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 572 605 L 607 605 C 627 605 627,605 627 611 L 627 611 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 ">
+                      </path>
+                      <path id="1677594742472" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 572.6999969482422 601.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594742472" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 677.5 555.2000015377998 L 671.5 558.2000015377998 L 673 555.2000015377998 L 671.5 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594742472"
+                        d="M 572 605 L 607 605 C 627 605 627,605 627 611 L 627 611 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594744268" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 572 629 L 607 629 C 627 629 627,629 627 623 L 627 623 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 ">
+                      </path>
+                      <path id="1677594744268" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 572.6999969482422 625.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594744268" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 677.5 555.2000015377998 L 671.5 558.2000015377998 L 673 555.2000015377998 L 671.5 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594744268"
+                        d="M 572 629 L 607 629 C 627 629 627,629 627 623 L 627 623 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1727168216182" pointer-events="all" stroke-width="1"
+                        x="157.5" y="152.80000001192093" width="140" height="126" rx="18.9" ry="18.9"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#9CD99C" fill="none" id="1727168409048" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 99 159 L 113 159 C 128 159 128,159 128 163 L 128 163 C 128 167 128,167 140 167 L 148 167 ">
+                      </path>
+                      <path id="1727168409048" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 99.5 156 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168409048" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 152 167.80000001192093 L 146 170.80000001192093 L 147.5 167.80000001192093 L 146 164.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168409048"
+                        d="M 99 159 L 113 159 C 128 159 128,159 128 163 L 128 163 C 128 167 128,167 140 167 L 148 167 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1727168411425" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325 ">
+                      </path>
+                      <path id="1727168411425" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 298 214.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168411425" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.6999969482422 325.800000011921 L 722.6999969482422 328.800000011921 L 724.1999969482422 325.800000011921 L 722.6999969482422 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168411425"
+                        d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#9CD99C" fill="none" id="1727168413051" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 297 241 L 329 241 C 349 241 349,241 349 221 L 349 175 C 349 155 349,155 369 155 L 392 155 ">
+                      </path>
+                      <path id="1727168413051" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 298 238.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168413051" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 396.5 155.80000001192093 L 390.5 158.80000001192093 L 392 155.80000001192093 L 390.5 152.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168413051"
+                        d="M 297 241 L 329 241 C 349 241 349,241 349 221 L 349 175 C 349 155 349,155 369 155 L 392 155 "
+                        stroke-width="9"></path>
+                    </g>
+                  </g>
+                  <g>
+                    <g pointer-events="none" style="cursor: move;">
+                      <rect stroke="#a0c9ff" fill="none" stroke-width="2" stroke-dasharray="3,3"></rect>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 178px; top: 537px; width: 140px; height: 58px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_ErrorHandler" data-taskid="1606851494184"
+                        id="analystTaskNode_1606851494184" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header_error modifiable" style="">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/ErrorHandler.png"></div>
+                            <div class="analystTaskLabel "> <label>ErrorHandler</label></div>
+                          </div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="LOCALIZE_TEXT_ERROR_PATH 1" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;ErrorPath1&quot;,&quot;label&quot;:&quot;LOCALIZE_TEXT_ERROR_PATH 1&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Error Path 1</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 402px; top: 143px; width: 140px; height: 150px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_ConnectAgent markNode_TimedOut"
+                        data-taskid="1646130476317" id="analystTaskNode_1646130476317"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/ConnectAgent.png"></div>
+                            <div class="analystTaskLabel "> <label>ConnectAgent</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Agent adding">Agent adding</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Agent dequeue timeout" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;dequeued&quot;,&quot;label&quot;:&quot;Agent dequeue timeout&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent dequeue timeout</div>
+                          <div title="Agent available" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;agentAvailable&quot;,&quot;label&quot;:&quot;Agent available&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent available</div>
+                          <div title="Waiting for agent" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;giveTreatment_1&quot;,&quot;label&quot;:&quot;Waiting for agent&quot;,&quot;dependent&quot;:&quot;true&quot;,&quot;outputGroup&quot;:&quot;waitTreatment&quot;}"
+                            style="background: #fdf2e4;">Waiting for agent<span
+                              class="analystTask_connection_label">2</span></div>
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Error Path 1<img class="node_error_link" src="images/errorlink.png"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 942px; top: 437px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Disconnect" data-taskid="1646130756114"
+                        id="analystTaskNode_1646130756114" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Disconnect.png"></div>
+                            <div class="analystTaskLabel "> <label>Disconnect</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Disconnects the customer from the engagement">Disconnects the customer from the
+                              engagement</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Customer disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;disconnected&quot;,&quot;label&quot;:&quot;Customer disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Customer disconnected</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 683px; top: 542px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Disconnect" data-taskid="1646130861139"
+                        id="analystTaskNode_1646130861139" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Disconnect.png"></div>
+                            <div class="analystTaskLabel "> <label>DisconnectOnError</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Disconnects the customer from the engagement">Disconnects the customer from the
+                              engagement</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Customer disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;disconnected&quot;,&quot;label&quot;:&quot;Customer disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Customer disconnected</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 729px; top: 230px; width: 140px; height: 54px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_BusinessStrategy markNode_TimedOut"
+                        data-taskid="1652376634452" id="analystTaskNode_1652376634452"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/BusinessStrategy.png"></div>
+                            <div class="analystTaskLabel "> <label>BusinessStrategy</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Set up the conditions for changing agent request strategy">Set up the conditions
+                              for
+                              changing agent req...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 729px; top: 46px; width: 140px; height: 150px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_AgentConnected" data-taskid="1663162416112"
+                        id="analystTaskNode_1663162416112" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/AgentConnected.png"></div>
+                            <div class="analystTaskLabel "> <label>AgentConnected</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Customer is connected to the best agent">Customer is connected to the best
+                              agent</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Agent disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;agentDisconnected&quot;,&quot;label&quot;:&quot;Agent disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent disconnected</div>
+                          <div title="Customer transferred" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;customerTransferred&quot;,&quot;label&quot;:&quot;Customer transferred&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Customer transferred</div>
+                          <div title="Redirected to external" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;customerRedirectedToExternal&quot;,&quot;label&quot;:&quot;Redirected to external&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Redirected to external</div>
+                          <div title="Consultation initiated" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;consultInitiated&quot;,&quot;label&quot;:&quot;Consultation initiated&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Consultation initiated</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 942px; top: 313px; width: 140px; height: 54px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Consult" data-taskid="1663162427600"
+                        id="analystTaskNode_1663162427600" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Consult.png"></div>
+                            <div class="analystTaskLabel "> <label>Consult</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Consultation call is in progress">Consultation call is in progress</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 734px; top: 313px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_GiveTreatment markNode_TimedOut"
+                        data-taskid="1677594696558" id="analystTaskNode_1677594696558"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/GiveTreatment.png"></div>
+                            <div class="analystTaskLabel "> <label>GiveTreatment</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Apply wait treatment until the agent is available">Apply wait treatment until the
+                              agent is avai...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;}">Error
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 432px; top: 542px; width: 140px; height: 102px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_GiveTreatment" data-taskid="1677594718118"
+                        id="analystTaskNode_1677594718118" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/GiveTreatment.png"></div>
+                            <div class="analystTaskLabel "> <label>ErrorHandling</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Play error handling application">Play error handling application</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;}">Error
+                          </div>
+                          <div title="Exit Treatment" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;exitTreatment&quot;,&quot;label&quot;:&quot;Exit Treatment&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;true&quot;}">
+                            Exit Treatment</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 158px; top: 155px; width: 140px; height: 126px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_Conditional markNode_Completed"
+                        data-taskid="1727168216182" id="analystTaskNode_1727168216182"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Conditional.png"></div>
+                            <div class="analystTaskLabel "> <label>Service Disruption</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Take a different execution path based on conditions you define">Take a different
+                              execution path based on con...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="True" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;true_e66f4754-2d19-4d1d-991f-316f978369da&quot;,&quot;label&quot;:&quot;True&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            True</div>
+                          <div title="False" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;false_f66f91f7-a9c1-4a05-b73d-d932de435158&quot;,&quot;label&quot;:&quot;False&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            False</div>
+                          <div title="Default" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;default&quot;,&quot;label&quot;:&quot;Default&quot;,&quot;readonly&quot;:&quot;true&quot;}">
+                            Default</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel bottom-panel" id="emergency_workflow2" style="display:none;  flex-direction: column;">
+      <div class="workflow-container" style="position: relative;">
+        <table
+          style="border-collapse: collapse; position: absolute; font-size: 12px; color: rgb(0, 0, 0); font-family: Verdana; font-weight: normal; border-style: none; left: 0px;">
+          <tbody>
+            <tr id="svg_c5e5ab02-f458-4f08-865b-79f665f03c36"><svg width="1159.5" height="753">
+              <g>
+                <text x="10" y="30" font-family="Arial, sans-serif" font-size="20" fill="#333333" font-weight="bold">
+                  Emergency Disruption Workflow
+                </text>
+                <g></g>
+                <g>
+                <g>
+                  <g></g>
+                  <g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/StartTask.png" style="pointer-events:none" stroke-width="1" x="70"
+                        y="145" width="29" height="29" rx="4.35" ry="4.35" transform=" scale(1 1) translate(0 0)">
+                      </image>
+                      <rect stroke="none" fill="none" id="1606851494183" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="70" y="145" width="29" height="29" rx="4.35" ry="4.35"></rect>
+                      <image href="/vom_dash/assets/GreenEvent.png" x="63" y="139" width="40" height="40" class="markCircleNode"
+                        data-taskId="1606851494183"></image>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="71" y="177" width="29" height="29"
+                        stroke-width="1"></rect><text text-decoration="inherit" x="84.5" y="185.7"
+                        style="pointer-events: all">StartTask</text>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1606851494184" pointer-events="all" stroke-width="1"
+                        x="178" y="535" width="140" height="58" rx="8.7" ry="8.7"></rect>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130476317" pointer-events="all" stroke-width="1"
+                        x="402" y="140.80000001192093" width="140" height="150" rx="21" ry="21"></rect>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130756114" pointer-events="all" stroke-width="1"
+                        x="941.5" y="434.80000001192093" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/EndTask.png" style="pointer-events:none" stroke-width="1" x="1129.5"
+                        y="249.80000001192093" width="29" height="29" rx="4.35" ry="4.35"
+                        transform=" scale(1 1) translate(0 0)"></image>
+                      <rect stroke="none" fill="none" id="1646130786497" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="1129.5" y="249.80000001192093" width="29" height="29" rx="4.35" ry="4.35">
+                      </rect>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="1130.5" y="281.80000001192093"
+                        width="29" height="29" stroke-width="1"></rect><text text-decoration="inherit" x="1144"
+                        y="290.5000000119209" style="pointer-events: all">EndTask5</text>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1646130795668" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 1081 499 L 1093 499 C 1105 499 1105,499 1105 479 L 1105 284 C 1105 264 1105,264 1117 264 L 1125 264 ">
+                      </path>
+                      <path id="1646130795668" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1082 496.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1646130795668" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1129 264.30000001192093 L 1123 267.30000001192093 L 1124.5 264.30000001192093 L 1123 261.30000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1646130795668"
+                        d="M 1081 499 L 1093 499 C 1105 499 1105,499 1105 479 L 1105 284 C 1105 264 1105,264 1117 264 L 1125 264 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1646130861139" pointer-events="all" stroke-width="1"
+                        x="683" y="540.2000015377998" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <image xlink:href="/vom_dash/assets/EndTask.png" style="pointer-events:none" stroke-width="1" x="912.5"
+                        y="564" width="29" height="29" rx="4.35" ry="4.35" transform=" scale(1 1) translate(0 0)">
+                      </image>
+                      <rect stroke="none" fill="none" id="1646130883724" visibility="hidden" pointer-events="all"
+                        stroke-width="1" x="912.5" y="564" width="29" height="29" rx="4.35" ry="4.35"></rect>
+                    </g>
+                    <g text-decoration="none" text-anchor="middle" font-family="noto-sans" font-weight="normal"
+                      font-size="9px" fill="#000000">
+                      <rect shape-rendering="crispEdges" fill="none" stroke="none" x="913.5" y="596" width="29"
+                        height="29" stroke-width="1"></rect><text text-decoration="inherit" x="927" y="604.7"
+                        style="pointer-events: all">EndTask3</text>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1646130887528" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 823 605 L 847 605 C 867 605 867,605 867 591 L 867 591 C 867 578 867,578 887 578 L 908 578 ">
+                      </path>
+                      <path id="1646130887528" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 823.5 601.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1646130887528" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 912 578.5 L 906 581.5 L 907.5 578.5 L 906 575.5 z"></path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1646130887528"
+                        d="M 823 605 L 847 605 C 867 605 867,605 867 591 L 867 591 C 867 578 867,578 887 578 L 908 578 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1652376634452" pointer-events="all" stroke-width="1"
+                        x="728.6666666666665" y="227.80000001192093" width="140" height="54" rx="8.1" ry="8.1"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1652376724151" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 542 253 L 615 253 C 635 253 635,253 635 248 L 635 248 C 635 242 635,242 655 242 L 719 242 "
+                        stroke-dasharray="3,3"></path>
+                      <path id="1652376724151" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 250.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1652376724151" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 723.1666666666665 242.80000001192093 L 717.1666666666665 245.80000001192093 L 718.6666666666665 242.80000001192093 L 717.1666666666665 239.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1652376724151"
+                        d="M 542 253 L 615 253 C 635 253 635,253 635 248 L 635 248 C 635 242 635,242 655 242 L 719 242 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1663162416112" pointer-events="all" stroke-width="1"
+                        x="728.6666666666664" y="43.5" width="140" height="150" rx="21" ry="21"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162420270" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 542 229 L 664 229 C 684 229 684,229 684 209 L 684 78 C 684 58 684,58 703 58 L 719 58 ">
+                      </path>
+                      <path id="1663162420270" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 226.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162420270" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 723.1666666666664 58.5 L 717.1666666666664 61.5 L 718.6666666666664 58.5 L 717.1666666666664 55.5 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162420270"
+                        d="M 542 229 L 664 229 C 684 229 684,229 684 209 L 684 78 C 684 58 684,58 703 58 L 719 58 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1663162427600" pointer-events="all" stroke-width="1"
+                        x="941.5" y="310.800000011921" width="140" height="54" rx="8.1" ry="8.1"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162439859" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 156 L 979 156 C 999 156 999,156 999 176 L 999 244 C 999 264 999,264 1019 264 L 1125 264 ">
+                      </path>
+                      <path id="1663162439859" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 153 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162439859" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 1129 264.30000001192093 L 1123 267.30000001192093 L 1124.5 264.30000001192093 L 1123 261.30000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162439859"
+                        d="M 868 156 L 979 156 C 999 156 999,156 999 176 L 999 244 C 999 264 999,264 1019 264 L 1125 264 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162442369" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 728 132 L 655 132 C 635 132 635,132 635 144 L 635 144 C 635 155 635,155 615 155 L 546 155 ">
+                      </path>
+                      <path id="1663162442369" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.1666666666664 136 a 3.5 3.5 0  1,1 1 0 z" stroke-width="1"></path>
+                      <path id="1663162442369" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 155.80000001192093 L 548.5 152.80000001192093 L 547 155.80000001192093 L 548.5 158.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162442369"
+                        d="M 728 132 L 655 132 C 635 132 635,132 635 144 L 635 144 C 635 155 635,155 615 155 L 546 155 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1663162444693" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 108 L 882 108 C 896 108 896,108 896 128 L 896 429 C 896 449 896,449 916 449 L 932 449 ">
+                      </path>
+                      <path id="1663162444693" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 105 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1663162444693" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 936 449.80000001192093 L 930 452.80000001192093 L 931.5 449.80000001192093 L 930 446.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1663162444693"
+                        d="M 868 108 L 882 108 C 896 108 896,108 896 128 L 896 429 C 896 449 896,449 916 449 L 932 449 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1669284933795" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 868 180 L 886 180 C 905 180 905,180 905 200 L 905 305 C 905 325 905,325 920 325 L 932 325 "
+                        stroke-dasharray="3,3"></path>
+                      <path id="1669284933795" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 869.1666666666664 177 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1669284933795" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 936 325.800000011921 L 930 328.800000011921 L 931.5 325.800000011921 L 930 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1669284933795"
+                        d="M 868 180 L 886 180 C 905 180 905,180 905 200 L 905 305 C 905 325 905,325 920 325 L 932 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1677594696558" pointer-events="all" stroke-width="1"
+                        x="734.1999969482422" y="310.800000011921" width="140" height="78" rx="11.7" ry="11.7"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594700540" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 542 253 L 618 253 C 638 253 638,253 638 273 L 638 305 C 638 325 638,325 658 325 L 724 325 "
+                        stroke-dasharray="3,3"></path>
+                      <path id="1677594700540" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 542.5 250.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594700540" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.6999969482422 325.800000011921 L 722.6999969482422 328.800000011921 L 724.1999969482422 325.800000011921 L 722.6999969482422 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594700540"
+                        d="M 542 253 L 618 253 C 638 253 638,253 638 273 L 638 305 C 638 325 638,325 658 325 L 724 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1677594718118" pointer-events="all" stroke-width="1"
+                        x="432.1999969482422" y="540.2000015377998" width="140" height="102" rx="15.299999999999999"
+                        ry="15.299999999999999"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594722278" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 318 580 L 355 580 C 375 580 375,580 375 567 L 375 567 C 375 555 375,555 395 555 L 422 555 ">
+                      </path>
+                      <path id="1677594722278" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 318.5 576.5 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594722278" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 426.6999969482422 555.2000015377998 L 420.6999969482422 558.2000015377998 L 422.1999969482422 555.2000015377998 L 420.6999969482422 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594722278"
+                        d="M 318 580 L 355 580 C 375 580 375,580 375 567 L 375 567 C 375 555 375,555 395 555 L 422 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594742472" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 572 605 L 607 605 C 627 605 627,605 627 611 L 627 611 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 ">
+                      </path>
+                      <path id="1677594742472" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 572.6999969482422 601.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594742472" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 677.5 555.2000015377998 L 671.5 558.2000015377998 L 673 555.2000015377998 L 671.5 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594742472"
+                        d="M 572 605 L 607 605 C 627 605 627,605 627 611 L 627 611 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1677594744268" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 572 629 L 607 629 C 627 629 627,629 627 623 L 627 623 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 ">
+                      </path>
+                      <path id="1677594744268" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 572.6999969482422 625.7000015377998 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1677594744268" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 677.5 555.2000015377998 L 671.5 558.2000015377998 L 673 555.2000015377998 L 671.5 552.2000015377998 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1677594744268"
+                        d="M 572 629 L 607 629 C 627 629 627,629 627 623 L 627 623 C 627 617 627,617 627 597 L 627 575 C 627 555 627,555 647 555 L 673 555 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <rect stroke="#ffffff" fill="#ffffff" id="1727168216182" pointer-events="all" stroke-width="1"
+                        x="157.5" y="152.80000001192093" width="140" height="126" rx="18.9" ry="18.9"></rect>
+                    </g>
+                    <g>
+                      <path stroke="#9CD99C" fill="none" id="1727168409048" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 99 159 L 113 159 C 128 159 128,159 128 163 L 128 163 C 128 167 128,167 140 167 L 148 167 ">
+                      </path>
+                      <path id="1727168409048" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 99.5 156 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168409048" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 152 167.80000001192093 L 146 170.80000001192093 L 147.5 167.80000001192093 L 146 164.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168409048"
+                        d="M 99 159 L 113 159 C 128 159 128,159 128 163 L 128 163 C 128 167 128,167 140 167 L 148 167 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <!-- <path stroke="#9CD99C" fill="none" id="1727168411425" pointer-events="visibleStroke"
+                        stroke-width="4"
+                        d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325 ">
+                      </path> -->
+                      <!-- <path stroke="#9CD99C" fill="none" id="1727168411425" pointer-events="visibleStroke"
+                      stroke-width="4"
+                      d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325"
+                      stroke-dasharray="20,20"
+                      stroke-dashoffset="0">
+                  <animate attributeName="stroke-dashoffset" values="40;0" dur="1s" repeatCount="indefinite" />
+                  <animate attributeName="stroke-width" values="4;6;4" dur="1s" repeatCount="indefinite" />
+                </path> -->
 
-    <div class="panel bottom-panel" id="message-panel">All Systems Normal</div>
+                <path stroke="#9CD99C" fill="none" id="1727168411425" pointer-events="visibleStroke"
+      stroke-width="4"
+      d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325"
+      stroke-dasharray="15,15"
+      stroke-dashoffset="0">
+  <animate attributeName="stroke-dashoffset" values="30;0" dur="0.75s" repeatCount="indefinite" />
+  <animate attributeName="stroke-width" values="4;7;4" dur="0.75s" repeatCount="indefinite" />
+</path>
+                      <path id="1727168411425" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 298 214.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168411425" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 728.6999969482422 325.800000011921 L 722.6999969482422 328.800000011921 L 724.1999969482422 325.800000011921 L 722.6999969482422 322.800000011921 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168411425"
+                        d="M 297 217 L 495 217 C 515 217 515,217 515 237 L 515 305 C 515 325 515,325 535 325 L 724 325 "
+                        stroke-width="9"></path>
+                    </g>
+                    <g>
+                      <path stroke="#3C5064" fill="none" id="1727168413051" pointer-events="visibleStroke"
+                        stroke-width="1"
+                        d="M 297 241 L 329 241 C 349 241 349,241 349 221 L 349 175 C 349 155 349,155 369 155 L 392 155 ">
+                      </path>
+                      <path id="1727168413051" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 298 238.30000001192093 a 3.5 3.5 0  1,1 -1 0 z" stroke-width="1"></path>
+                      <path id="1727168413051" stroke="#3C5064" stroke-opacity="1" fill="#3C5064" fill-opacity="1"
+                        d="M 396.5 155.80000001192093 L 390.5 158.80000001192093 L 392 155.80000001192093 L 390.5 152.80000001192093 z">
+                      </path>
+                      <path stroke="#3C5064" visibility="hidden" pointer-events="stroke" id="1727168413051"
+                        d="M 297 241 L 329 241 C 349 241 349,241 349 221 L 349 175 C 349 155 349,155 369 155 L 392 155 "
+                        stroke-width="9"></path>
+                    </g>
+                  </g>
+                  <g>
+                    <g pointer-events="none" style="cursor: move;">
+                      <rect stroke="#a0c9ff" fill="none" stroke-width="2" stroke-dasharray="3,3"></rect>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 178px; top: 537px; width: 140px; height: 58px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_ErrorHandler" data-taskid="1606851494184"
+                        id="analystTaskNode_1606851494184" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header_error modifiable" style="">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/ErrorHandler.png"></div>
+                            <div class="analystTaskLabel "> <label>ErrorHandler</label></div>
+                          </div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="LOCALIZE_TEXT_ERROR_PATH 1" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;ErrorPath1&quot;,&quot;label&quot;:&quot;LOCALIZE_TEXT_ERROR_PATH 1&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Error Path 1</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 402px; top: 143px; width: 140px; height: 150px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_ConnectAgent" data-taskid="1646130476317"
+                        id="analystTaskNode_1646130476317" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/ConnectAgent.png"></div>
+                            <div class="analystTaskLabel "> <label>ConnectAgent</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Agent adding">Agent adding</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Agent dequeue timeout" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;dequeued&quot;,&quot;label&quot;:&quot;Agent dequeue timeout&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent dequeue timeout</div>
+                          <div title="Agent available" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;agentAvailable&quot;,&quot;label&quot;:&quot;Agent available&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent available</div>
+                          <div title="Waiting for agent" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;giveTreatment_1&quot;,&quot;label&quot;:&quot;Waiting for agent&quot;,&quot;dependent&quot;:&quot;true&quot;,&quot;outputGroup&quot;:&quot;waitTreatment&quot;}"
+                            style="background: #fdf2e4;">Waiting for agent<span
+                              class="analystTask_connection_label">2</span></div>
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Error Path 1<img class="node_error_link" src="/vom_dash/assets/errorlink.png"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 942px; top: 437px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Disconnect" data-taskid="1646130756114"
+                        id="analystTaskNode_1646130756114" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Disconnect.png"></div>
+                            <div class="analystTaskLabel "> <label>Disconnect</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Disconnects the customer from the engagement">Disconnects the customer from the
+                              engagement</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Customer disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;disconnected&quot;,&quot;label&quot;:&quot;Customer disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Customer disconnected</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 683px; top: 542px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Disconnect" data-taskid="1646130861139"
+                        id="analystTaskNode_1646130861139" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Disconnect.png"></div>
+                            <div class="analystTaskLabel "> <label>DisconnectOnError</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Disconnects the customer from the engagement">Disconnects the customer from the
+                              engagement</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Customer disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;disconnected&quot;,&quot;label&quot;:&quot;Customer disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            Customer disconnected</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 729px; top: 230px; width: 140px; height: 54px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_BusinessStrategy" data-taskid="1652376634452"
+                        id="analystTaskNode_1652376634452" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #ecf4fb;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/BusinessStrategy.png"></div>
+                            <div class="analystTaskLabel "> <label>BusinessStrategy</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Set up the conditions for changing agent request strategy">Set up the conditions
+                              for changing agent req...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 729px; top: 46px; width: 140px; height: 150px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_AgentConnected" data-taskid="1663162416112"
+                        id="analystTaskNode_1663162416112" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/AgentConnected.png"></div>
+                            <div class="analystTaskLabel "> <label>AgentConnected</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Customer is connected to the best agent">Customer is connected to the best
+                              agent</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Agent disconnected" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;agentDisconnected&quot;,&quot;label&quot;:&quot;Agent disconnected&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Agent disconnected</div>
+                          <div title="Customer transferred" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;customerTransferred&quot;,&quot;label&quot;:&quot;Customer transferred&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Customer transferred</div>
+                          <div title="Redirected to external" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;customerRedirectedToExternal&quot;,&quot;label&quot;:&quot;Redirected to external&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Redirected to external</div>
+                          <div title="Consultation initiated" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;consultInitiated&quot;,&quot;label&quot;:&quot;Consultation initiated&quot;,&quot;dependent&quot;:&quot;false&quot;}">
+                            Consultation initiated</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 942px; top: 313px; width: 140px; height: 54px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_Consult" data-taskid="1663162427600"
+                        id="analystTaskNode_1663162427600" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Consult.png"></div>
+                            <div class="analystTaskLabel "> <label>Consult</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Consultation call is in progress">Consultation call is in progress</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 734px; top: 313px; width: 140px; height: 78px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_GiveTreatment markNode_TimedOut"
+                        data-taskid="1677594696558" id="analystTaskNode_1677594696558"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/GiveTreatment.png"></div>
+                            <div class="analystTaskLabel "> <label>GiveTreatment</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Apply wait treatment until the agent is available">Apply wait treatment until the
+                              agent is avai...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;}">Error
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 432px; top: 542px; width: 140px; height: 102px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode  analystTaskName_GiveTreatment" data-taskid="1677594718118"
+                        id="analystTaskNode_1677594718118" style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/GiveTreatment.png"></div>
+                            <div class="analystTaskLabel "> <label>ErrorHandling</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Play error handling application">Play error handling application</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="Error" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;error&quot;,&quot;label&quot;:&quot;Error&quot;}">Error
+                          </div>
+                          <div title="Exit Treatment" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;exitTreatment&quot;,&quot;label&quot;:&quot;Exit Treatment&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;true&quot;}">
+                            Exit Treatment</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="0"
+                style="border-collapse: collapse; position: absolute; font-size: 9px; color: rgb(0, 0, 0); font-family: noto-sans; font-weight: normal; border-style: none; left: 158px; top: 155px; width: 140px; height: 126px;">
+                <tbody>
+                  <tr>
+                    <td style="text-align: center; vertical-align: top; white-space: nowrap;">
+                      <div class="analystTaskNode analystTaskName_Conditional markNode_Completed"
+                        data-taskid="1727168216182" id="analystTaskNode_1727168216182"
+                        style="display: flex;flex-direction: column;width: 150px;">
+                        <div class="AnalystTask_header modifiable" style="background-color: #E8F1FC;">
+                          <div style="display:flex;height: 25px;">
+                            <div style="margin-right:2px;"><img style="height: 24px; width: 24px;"
+                                src="/vom_dash/assets/Conditional.png"></div>
+                            <div class="analystTaskLabel "> <label>Service Disruption</label></div>
+                          </div>
+                          <div style="text-align: left;margin: 0px 0px 0px 0px;"><label
+                              style="display: inline-block;max-width: 100%;overflow: hidden;text-overflow: ellipsis;"
+                              title="Take a different execution path based on conditions you define">Take a different
+                              execution path based on con...</label></div>
+                        </div>
+                        <div class="AnalystTask_body" style="flex-grow:1;">
+                          <div title="True" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;true_e66f4754-2d19-4d1d-991f-316f978369da&quot;,&quot;label&quot;:&quot;True&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            True</div>
+                          <div title="False" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;false_f66f91f7-a9c1-4a05-b73d-d932de435158&quot;,&quot;label&quot;:&quot;False&quot;,&quot;dependent&quot;:&quot;false&quot;,&quot;readonly&quot;:&quot;false&quot;}">
+                            False</div>
+                          <div title="Default" class="analystTask_connection"
+                            data-conn="{&quot;name&quot;:&quot;default&quot;,&quot;label&quot;:&quot;Default&quot;,&quot;readonly&quot;:&quot;true&quot;}">
+                            Default</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="panel bottom-panel" id="message-panel">All Systems Normal</div>
   </div>
   </div>
   </div>
